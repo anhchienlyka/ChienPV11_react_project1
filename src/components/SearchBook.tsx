@@ -31,6 +31,7 @@ const SearchBook = () => {
         )
         .catch((error: Error) => console.log(error));
     }
+
     // eslint-disable-next-line
   }, [debounceInputSearch]);
 

@@ -49,6 +49,7 @@ const ListBooks = () => {
   };
 
   const handleSelectBookShelf = (book: IBook, option: string) => {
+    debugger
     BooksAPI.update(book, option).then(() => getAllBooks());
   };
   return (
