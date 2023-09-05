@@ -5,7 +5,6 @@ import { IBook } from "../interfaces/IBook";
 function GetDetailBook() {
   const [book, setBook] = useState<IBook>();
   const { bookId } = useParams();
-  console.log("book", book);
   useEffect(() => {
     BooksAPI.get(bookId)
       .then((bookData) => {

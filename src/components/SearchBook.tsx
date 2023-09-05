@@ -14,7 +14,7 @@ const SearchBook = () => {
   const debounceInputSearch = useDebounce<string>(inputBookSearch, 500);
 
   useEffect(() => {
-    if (debounceInputSearch) {
+    if (debounceInputSearch.length!==0) {
       BookAPI.search(debounceInputSearch)
         .then((book: IBook[]) =>
           setListBookSearch(
@@ -30,6 +30,9 @@ const SearchBook = () => {
           )
         )
         .catch((error: Error) => console.log(error));
+    }
+    else if(debounceInputSearch.length===0){
+      setListBookSearch([]);
     }
 
     // eslint-disable-next-line
