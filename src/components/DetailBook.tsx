@@ -37,7 +37,7 @@ const DetailBook = ({ books, handleSelectBookDetail }: BookInfor) => {
                         <option value="move" disabled>
                           {ActionBook.MOVE_TO}
                         </option>
-                        <option value="currentReading">
+                        <option value="currentlyReading">
                           {ActionBook.CURRRENTLY_READING}
                         </option>
                         <option value="wantToRead">{ActionBook.WANT_READ}</option>
